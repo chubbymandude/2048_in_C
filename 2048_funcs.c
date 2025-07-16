@@ -11,7 +11,7 @@ int dir_y[4] = {-1, 1, 0, 0};
 // FUNCTIONS FOR LIST // 
 ////////////////////////
 
-// Allocates space for an empty_list with 0 nodes
+// allocates space for an empty_list with 0 nodes
 empty_list_t *empty_list_init()
 {
     empty_list_t *empty_list = malloc(sizeof(empty_list_t));
@@ -20,7 +20,7 @@ empty_list_t *empty_list_init()
     return empty_list;
 }
 
-// Frees space allocated by empty_list and all nodes in it
+// frees space allocated by empty_list and all nodes in it
 void empty_list_free(empty_list_t *list)
 {
     list_node_t *curr = list->front;
@@ -132,7 +132,7 @@ int empty_list_get_random(empty_list_t *list, int *rowP, int *colP)
     return 1; // random coordinates successfully found
 }
 
-//Prints all contents of the empty_list for debugging
+// prints all contents of the empty_list for debugging
 void empty_list_print(empty_list_t *list)
 {
     printf("List Length: %d\n", list->length);

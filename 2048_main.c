@@ -59,7 +59,7 @@ GET_INPUT:
         }
         else if(tolower(move) == 'r')
         {
-            free(game);
+            game_free(game);
             printf("\nGame restarting...\n");
             goto GAME_INIT; // explicit jump to reinitialize the game
         }
@@ -82,9 +82,9 @@ GET_INPUT:
             }
         }
     }
+    // print final stats
     printf("The game is done!\n");
     printf("Your stats this round...\n");
     game_print(game, NO_LOG);
-    // print final stats
     game_free(game);
 }
