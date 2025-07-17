@@ -20,9 +20,10 @@ int main(int argc, char **argv)
     printf("Q --> Quit\n");
     printf("R --> Restart\n");
 
-    // set terminal
+    // set terminal & rand generator
     struct termios old, new;
     set_terminal(old, new);
+    srand(time(NULL));
 
 GAME_INIT: 
     game_t *game = game_init();
